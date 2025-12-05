@@ -13,9 +13,18 @@ The extension communicates with the engine via subprocess calls and consumes JSO
 - Log and artifact viewing
 
 ## Requirements
-- aiwf CLI on PATH
-- Python 3.11+
-- Node.js for extension development
+
+- **AI Workflow Engine** installed and accessible on PATH  
+  https://github.com/scottcm/ai-workflow-engine  
+  Minimum version: 1.0.0
+- Python 3.11+ (for the engine)  
+- Node.js + npm (for extension development)  
+
+The extension communicates with the engine via CLI subprocess calls. 
+See the [Engine API Contract](https://github.com/scottcm/ai-workflow-engine/blob/main/API-CONTRACT.md) 
+for the complete interface specification.
+
+All AI provider configuration is handled by the **engine**, not the extension.
 
 ## Commands
 AIWF: New Workflow  
@@ -31,4 +40,5 @@ VS Code Extension → (subprocess) → aiwf CLI → engine core
 
 ## Status
 Extension development begins after engine CLI contract stabilizes.
+
 
